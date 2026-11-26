@@ -1,0 +1,110 @@
+{
+  "generator": "brandforge",
+  "files": [
+    {
+      "path": "generated/REUSE.snippet.toml",
+      "bytes": 593,
+      "sha256": "8ecb24410825eba03b69a8c504b2384e12ff3636f10e5678ab5b074b62af2855"
+    },
+    {
+      "path": "generated/animated-mark-dark.svg",
+      "bytes": 1171,
+      "sha256": "897b6c27495813c8e99fe986221b667d6f30a114da7ceb2a8c181a5b4b14e4c3"
+    },
+    {
+      "path": "generated/animated-mark.svg",
+      "bytes": 1171,
+      "sha256": "112e66461d07ae2d13a6ea34a47384207beeda1c1bfe0307ad44e6afcbebe098"
+    },
+    {
+      "path": "generated/brandforge-animate.js",
+      "bytes": 1184,
+      "sha256": "77059a6ff47db929594b9373f60d5cf8b87c05dbbe0da70a9c8f8d00ea686030"
+    },
+    {
+      "path": "generated/favicon.svg",
+      "bytes": 593,
+      "sha256": "6f5e5017b465fbe962ea3676a226b3bdbb145d0c03b3a0c494d60b2797f73e38"
+    },
+    {
+      "path": "generated/lockup-dark.svg",
+      "bytes": 899,
+      "sha256": "74785f53185d13a931075e9fe9c86a08f60bea01f7a54f531712763c53698e8e"
+    },
+    {
+      "path": "generated/lockup-en-dark.svg",
+      "bytes": 803,
+      "sha256": "b70e8d55efb133154d832648454713e37c88ff63b03f03f8644e92189c250a4c"
+    },
+    {
+      "path": "generated/mark-dark.svg",
+      "bytes": 555,
+      "sha256": "b37d749f9d0ca33df0b15fdcc930cdb2da765cfa059f83fb5ebc09f9673b1d1a"
+    },
+    {
+      "path": "generated/small-mark-dark.svg",
+      "bytes": 441,
+      "sha256": "8635c94826ca433a7099a18c7c105ba628d5306a88c4aa085bae4a2eba8162d8"
+    },
+    {
+      "path": "generated/tokens.css",
+      "bytes": 3151,
+      "sha256": "6a4470fe8ef2b294124d39ea8561905f9444c4f1e05ddfaf9b254d9d84fc0d64"
+    },
+    {
+      "path": "generated/tokens.json",
+      "bytes": 9816,
+      "sha256": "a90a2cc7e176e0deb05ceb01e6345ae6253cb1a26aa4b7dbfba36ebddbc66f8c"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "generated/png/favicon-16.png",
+      "width": 16,
+      "height": 16
+    },
+    {
+      "path": "generated/png/favicon-32.png",
+      "width": 32,
+      "height": 32
+    },
+    {
+      "path": "generated/png/favicon-48.png",
+      "width": 48,
+      "height": 48
+    },
+    {
+      "path": "generated/png/apple-touch-icon.png",
+      "width": 180,
+      "height": 180
+    },
+    {
+      "path": "generated/png/icon-192.png",
+      "width": 192,
+      "height": 192
+    },
+    {
+      "path": "generated/png/icon-512.png",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "path": "generated/png/avatar-400.png",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "path": "generated/png/avatar-1024.png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "generated/favicon.ico",
+      "embeds": [
+        "generated/png/favicon-16.png",
+        "generated/png/favicon-32.png",
+        "generated/png/favicon-48.png"
+      ]
+    }
+  ]
+}

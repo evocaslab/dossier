@@ -1,5 +1,5 @@
 {
-  "$comment": "The one place for the tool's name and brand strings (name decided 2026-11-24, hq#188; colours are a draft default, see BRAND.md). To rename: change `product` here, then the <text> in logo-full*.svg and the name lines in brand.yaml.",
+  "$comment": "The one place for the tool's name and brand strings (name decided 2026-11-24, hq#188; mark and colours decided 2026-11-26, hq#218). To rename: change `product` here, then the <text> in logo-full*.svg and the name lines in brand.yaml.",
   "product": {
     "id": "dossier",
     "name": { "uk": "Досьє", "en": "dossier" },

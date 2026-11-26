@@ -1,5 +1,6 @@
 # Brand source of truth for the repo dossier checker (name: dossier, decided 2026-11-24, hq#188).
-# Colours and mark are a draft default (2026-11-26) awaiting the maintainer's answer; see BRAND.md.
+# Mark and colours: the amber folder with a check, built and checked with brandforge (maintainer, hq#218, 2026-11-26).
+# Masters hold light colours only; `brandforge build` writes the dark, mono, favicon and PNG files into generated/.
 # The name lives in brand.config.json; texts below repeat it only where a sentence needs it.
 schema: 1
 
@@ -31,6 +32,8 @@ roles:
   muted:          {light: "#545868", dark: "#A9AEC4", meaning: {uk: Другорядний текст, en: Secondary text}}
   border-strong:  {light: "#7B7F92", dark: "#878CA3", meaning: {uk: Межі полів і елементів керування, en: Input and control borders}}
   primary:        {light: "#8A5A00", dark: "#F2B544", meaning: {uk: "Єдиний акцент: тека знака, кнопки", en: "The one accent: the mark's folder, buttons"}}
+  folder-back:    {light: "#6B4500", dark: "#C98A1C", meaning: {uk: "Задня стінка теки в знаку", en: "The folder's back in the mark"}}
+  sheet:          {light: "#FFFDF7", dark: "#ECEEF8", meaning: {uk: "Аркуш у теці знака", en: "The sheet inside the mark's folder"}}
   on-primary:     {light: "#FEFEFE", dark: "#231800", meaning: {uk: Текст і галочка на акценті, en: Text and the check mark on the accent}}
   primary-text:   {light: "#6E4700", dark: "#F8CF7A", meaning: {uk: "Посилання й підписи акцентом", en: "Links and accent labels"}}
   focus:          {light: "#14151E", dark: "#EDEFF8", meaning: {uk: Рамка фокуса клавіатури, en: Keyboard focus ring}}
@@ -49,6 +52,8 @@ pairs:
   - {fg: focus, bg: paper, kind: ui, level: aa, use: Focus ring on the page}
   - {fg: focus, bg: surface, kind: ui, level: aa, use: Focus ring on a card}
   - {fg: primary, bg: paper, kind: ui, level: aa, use: Accent fill on the page}
+  - {fg: folder-back, bg: paper, kind: ui, level: aa, use: The mark's folder back on the page}
+  - {fg: on-primary, bg: folder-back, kind: ui, level: aa, use: The check if it overlaps the folder back}
 
 cvd:
   groups: [[primary, ink]]
@@ -78,12 +83,35 @@ fonts:
 assets:
   - {id: mark, form: mark, path: logo-mark.svg, mono: false, label: {uk: Знак, en: Mark}}
   - {id: small-mark, form: small-mark, path: favicon.svg, mono: false, label: {uk: Малий знак (16-32 px), en: Small mark (16 to 32 px)}}
+  # The still mark with ids on its parts; `build` writes generated/animated-mark.svg (the check is drawn in, then the
+  # sheet settles). Reduced motion shows the still frame.
+  - id: animated-mark
+    form: animated
+    path: logo-mark.svg
+    mono: false
+    note: {uk: "README і сторінка проєкту", en: "README and the project page"}
+    label: {uk: Анімований знак (галочка), en: Animated mark (the check)}
+    animation:
+      duration: 1.6
+      replay: [hover, focus]
+      parts:
+        - {target: "#sheet", preset: fade, start: 0, duration: 0.5}
+        - {target: "#check", preset: draw-in, start: 0.4, duration: 0.9}
   - {id: mono-mark, form: mono, path: logo-mark-mono.svg, label: {uk: Один колір, en: One colour}}
-  - {id: lockup, form: lockup, path: logo-full.svg, dark: false, mono: false, label: {uk: Лого з написом (укр), en: Lockup (Ukrainian)}}
-  - {id: lockup-en, form: lockup, path: logo-full-en.svg, dark: false, mono: false, label: {uk: Лого з написом (лат), en: Lockup (Latin)}}
+  - {id: lockup, form: lockup, path: logo-full.svg, mono: false, label: {uk: Лого з написом (укр), en: Lockup (Ukrainian)}}
+  - {id: lockup-en, form: lockup, path: logo-full-en.svg, mono: false, label: {uk: Лого з написом (лат), en: Lockup (Latin)}}
 
 budgets:
   svg_bytes: 4096
 
 icons:
   background_role: paper
+
+# The code is MIT (LICENSE); the logo artwork and the name are not: all rights reserved, so a fork picks its own.
+legal:
+  owner: EvoCASLab
+  artwork_license: LicenseRef-All-Rights-Reserved
+  license_file: legal/all-rights-reserved.txt
+  trademark:
+    en: "dossier and the dossier mark are trademarks of EvoCASLab. The code is MIT; the name and the mark are not part of that licence. Do not use them in a way that suggests endorsement. A fork must use another name and mark."
+    uk: "dossier і знак dossier є торговельними марками EvoCASLab. Код поширюється за MIT; назва і знак не входять до цієї ліцензії. Не використовуйте їх так, ніби вони підтверджують схвалення. Форк має мати іншу назву і знак."

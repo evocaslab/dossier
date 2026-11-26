@@ -1,0 +1,8 @@
+All rights reserved.
+
+Copyright (c) 2026 EvoCASLab.
+
+The artwork in this kit (logos, marks, icons and the files generated from them) is owned by EvoCASLab. No licence to
+copy, modify or redistribute it is granted unless the owner says so in writing. The code of dossier is licensed
+separately (MIT, see LICENSE); that licence does not cover the name or the artwork. You may show the unmodified logo
+to refer to the dossier project.
