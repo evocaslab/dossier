@@ -1,0 +1,6 @@
+schema: 1
+kind: cli
+parts: {}
+generated:
+  - path: docs/hello.txt
+    cmd: [echo, hello]

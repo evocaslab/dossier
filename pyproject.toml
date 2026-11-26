@@ -1,0 +1,58 @@
+[project]
+name = "evocaslab-dossier"
+version = "0.1.1"
+description = "Checks that a repo carries its dossier: front door, links and the parts declared in dossier.yaml."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = ["typer>=0.15", "pyyaml>=6"]
+
+[project.scripts]
+dossier = "dossier.cli:app"
+evocaslab-dossier = "dossier.cli:app"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.8", "types-pyyaml", "import-linter>=2.1", "basedpyright>=1.40.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dossier"]
+
+[tool.ruff]
+line-length = 110
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D203", "D213", "COM812", "ISC001", "CPY001", "D100", "D104"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "D103", "PLR2004"]
+"tests/fixtures/**" = ["INP001"]
+
+[tool.importlinter]
+root_package = "dossier"
+
+[[tool.importlinter.contracts]]
+name = "layers: entry > registry > checks > base > model (ARCHITECTURE.md)"
+type = "layers"
+containers = ["dossier"]
+layers = [
+  "__main__",
+  "cli",
+  "checks | scaffold",
+  "boundaries | contracts | decisions | freshness | stories",
+  "config | util",
+  "model",
+]
+
+[tool.basedpyright]
+# standard for now (errors fail); raising it to recommended is HQ B-261126-dossier-pyright-recommended
+typeCheckingMode = "standard"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

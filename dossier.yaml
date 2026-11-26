@@ -1,0 +1,24 @@
+# The repo dossier: which documents explain this repo. Checked by `dossier check dossier`.
+schema: 1
+kind: cli
+parts:
+  identity:
+    present: [BRAND.md, brand/brand.yaml]
+  purpose:
+    present: [README.md, WHY.md]
+  reasoning:
+    present: [docs/decisions/]
+  design:
+    present: [ARCHITECTURE.md, docs/user-stories.md]
+  contract:
+    present: [README.md, CHANGELOG.md]
+  trust:
+    present: [SECURITY.md, LICENSE]
+  help:
+    present: [CONTRIBUTING.md]
+  agents:
+    present: [AGENTS.md, skills/dossier/SKILL.md]
+# import-linter layers in pyproject.toml, through uv so it runs from the project's environment (a global
+# `dossier` install has no lint-imports on PATH).
+boundaries:
+  cmd: [uv, run, --frozen, lint-imports]

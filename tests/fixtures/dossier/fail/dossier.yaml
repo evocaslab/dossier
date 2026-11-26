@@ -1,0 +1,7 @@
+schema: 1
+kind: cli
+parts:
+  purpose:
+    present: [README.md, WHY.md]
+  trust:
+    exempt: ""

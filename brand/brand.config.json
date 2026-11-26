@@ -1,0 +1,10 @@
+{
+  "$comment": "The one place for the tool's name and brand strings (name decided 2026-11-24, hq#188; colours are a draft default, see BRAND.md). To rename: change `product` here, then the <text> in logo-full*.svg and the name lines in brand.yaml.",
+  "product": {
+    "id": "dossier",
+    "name": { "uk": "Досьє", "en": "dossier" },
+    "wordmark": { "uk": "dossier", "en": "dossier" },
+    "descriptor": { "uk": "перевірка досьє репозиторію", "en": "repo dossier checker" },
+    "tagline": { "uk": "Репозиторій, що пояснює себе сам.", "en": "A repo that can explain itself." }
+  }
+}

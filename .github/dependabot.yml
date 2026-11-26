@@ -1,0 +1,16 @@
+# Version updates wait 7 days after a release; security updates bypass the cooldown.
+# https://github.com/evocaslab/hq/blob/main/practices/supply-chain-security.md
+version: 2
+updates:
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7

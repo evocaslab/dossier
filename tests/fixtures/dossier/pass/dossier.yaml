@@ -1,0 +1,19 @@
+schema: 1
+kind: cli
+parts:
+  identity:
+    exempt: no brand yet
+  purpose:
+    present: [README.md]
+  reasoning:
+    present: [README.md]
+  design:
+    present: [README.md]
+  contract:
+    present: [README.md]
+  trust:
+    exempt: private repo
+  help:
+    exempt: private repo
+  agents:
+    present: [README.md]

@@ -1,0 +1,27 @@
+# The repo dossier: which documents explain this repo. Checked by `dossier check dossier`.
+# Each part: `present` with its paths, or `exempt` with a reason. `dossier new <part>` writes a template.
+schema: 1
+kind: cli # cli | library | web | service
+parts:
+  identity:
+    exempt: not written yet (a brand kit by brandforge)
+  purpose:
+    present: [README.md]
+  reasoning:
+    exempt: not written yet (dossier new reasoning)
+  design:
+    exempt: not written yet (dossier new design)
+  contract:
+    exempt: not written yet (dossier new contract)
+  trust:
+    exempt: not written yet (dossier new trust)
+  help:
+    exempt: not written yet (dossier new help)
+  agents:
+    exempt: not written yet (dossier new agents)
+# Optional:
+# generated:            # files rendered from the code; `dossier check contracts` re-renders and compares
+#   - path: docs/cli.md
+#     cmd: [mytool, docs]
+# boundaries:           # the layering check `dossier check boundaries` runs
+#   cmd: [lint-imports]

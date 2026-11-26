@@ -1,0 +1,7 @@
+- id: dossier
+  name: dossier
+  description: Check that the repo carries its dossier (one line per check; a fail or an unknown stops the commit).
+  entry: dossier check
+  language: python
+  pass_filenames: false
+  always_run: true
