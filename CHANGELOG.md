@@ -2,6 +2,14 @@
 
 All notable changes. Versions follow semver; one tag `vX.Y.Z` publishes the package, the hook rev and the Action.
 
+## Unreleased
+
+- Brand kit rebuilt with brandforge (hq#218): the mark is an open amber folder with a sheet and a check; masters hold
+  light colours and `brand/generated/` holds the dark variants, the adaptive favicon, PNG and ICO icons, avatars,
+  tokens, the manifest and the brand book; `brand/images/` holds the social card, hero and banner. `brandforge check
+  --strict` passes with no warnings. The README lockup follows the colour scheme. The artwork and the name are all
+  rights reserved by EvoCASLab (the code stays MIT).
+
 ## 0.1.1 - 2026-11-26
 
 Ready to go public; no change to the checks.

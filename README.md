@@ -3,7 +3,10 @@
 dossier checks that a repo carries the documents that explain it: the README front door, links, the parts listed in
 `dossier.yaml`, decision records, user stories, review dates, the changelog and the import rules.
 
-<img src="brand/logo-full-en.svg" alt="dossier: a folder with a check mark" height="64">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="brand/generated/lockup-en-dark.svg">
+  <img src="brand/logo-full-en.svg" alt="dossier: an amber folder with a sheet and a check mark" height="64">
+</picture>
 
 - **What.** A command (`dossier check`) that prints one line per check: `ok`, `fail` or `unknown`.
 - **Why.** Docs rot without a check. Each rule here is plain text matching, with no LLM and no network, so it runs in
